@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:id="@+id/txt_toolbar"
+        android:text="بخش مدیریت"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="14dp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/owner_EmptyList"
+        android:layout_width="200dp"
+        android:layout_below="@id/txt_toolbar"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_margin="3dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="empty_list.json"
+        android:layout_above="@+id/btn_set_billboard_status"
+        app:lottie_loop="true"/>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_rented_boards_by_owner"
+        android:layout_below="@+id/txt_toolbar"
+        android:visibility="gone"
+        android:layout_above="@+id/btn_set_billboard_status"/>
+
+    <Button
+        android:id="@+id/btn_set_billboard_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="تعیین وضعیت تابلو ها(مالک)"
+        android:textColor="#fff"
+        android:background="@drawable/login_btn_style"/>
+
+</RelativeLayout>

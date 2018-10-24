@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="false">
+
+    <RelativeLayout
+        android:id="@+id/rel_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp">
+
+            <ImageView
+                android:id="@+id/img_menu_bg"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/img_menu_bg2"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"/>
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/menu_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:background="#ee297fca">
+
+            <ImageButton
+                android:id="@+id/btn_close_menu2"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                app:srcCompat="@drawable/window_close"/>
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/menu_toolbar"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btn_login_menu"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_login_gray"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="10dp"
+                    android:text="ورود /عضویت"
+                    android:textColor="@color/menu_items_textColor"
+                    android:textSize="13sp"/>
+
+                <include layout="@layout/item_devider_layout"/>
+
+                <Button
+                    android:id="@+id/btn_management_menu"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_circle_user_gray"
+                    android:focusable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="10dp"
+                    android:textColor="@color/menu_items_textColor"
+                    android:textSize="13sp"
+                    android:visibility="gone"/>
+
+                <include layout="@layout/item_devider_layout"/>
+
+                <Button
+                    android:id="@+id/btn_Favorite"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_circle_user_gray"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="10dp"
+                    android:text="علاقمندی ها"
+                    android:textColor="@color/menu_items_textColor"
+                    android:textSize="13sp"/>
+
+                <include layout="@layout/item_devider_layout"/>
+
+                <Button
+                    android:id="@+id/btn_basket_menu"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_order_basket"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="10dp"
+                    android:text="سبد رزرو"
+                    android:textColor="@color/menu_items_textColor"
+                    android:textSize="13sp"
+                    android:visibility="gone"/>
+
+                <include layout="@layout/item_devider_layout"/>
+
+                <Button
+                    android:id="@+id/btn_about_us_menu"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_circle_user_gray"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="10dp"
+                    android:text="درباره ما"
+                    android:textColor="@color/menu_items_textColor"
+                    android:textSize="13sp"/>
+
+                <include layout="@layout/item_devider_layout"/>
+
+                <Button
+                    android:id="@+id/btn_support_menu"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_telephone_gray"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="10dp"
+                    android:text="پشتیبانی"
+                    android:textColor="@color/menu_items_textColor"
+                    android:textSize="13sp"/>
+
+                <include layout="@layout/item_devider_layout"/>
+
+                <Button
+                    android:id="@+id/btn_help"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="10dp"
+                    android:text="راهنمای برنامه"
+                    android:textColor="@color/menu_items_textColor"
+                    android:textSize="13sp"
+                    android:visibility="gone"/>
+
+                <include layout="@layout/item_devider_layout"/>
+
+                <Button
+                    android:id="@+id/btn_share_app_menu"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:drawableRight="@drawable/ic_share_app_gray"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="10dp"
+                    android:text="اشتراک برنامه"
+                    android:textColor="@color/menu_items_textColor"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

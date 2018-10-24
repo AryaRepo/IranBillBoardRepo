@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">IranBillboard</string>
+    <string name="title_activity_login">ورود</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username_phone">شماره تلفن همراه</string>
+    <string name="prompt_password">رمز عبور</string>
+    <string name="tab_1">جستجو</string>
+    <string name="tab_2">تابلوها</string>
+    <string name="tab_3">پروفایل</string>
+    <string name="title_activity_main2">MainActivity2</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    Sahand, [02.12.17 05:14]
+    <string name="ReagentHelpText">
+    اگر کسی از دوستان شما این برنامه را به شما معرفی کردند میتوانید شماره تلفن دوستتان را در اینجا وارد کنید تا امتیازی برای دوستتان ثبت گردد در ضمن خودتان هم میتوانید برای دیگران به عنوان معرف ثبت شوید فقط کافیست برنامه را به آن ها معرفی کنید و امتیازی برای خود دریافت کنید
+    </string>
+
+    Sahand, [02.12.17 05:15]
+    <string name="EmailHelpText">
+        اگر در قسمت مربوط به ایمیل ، ایمیل خود را وارد کنید میتوانید در زمان فراموشی رمز عبور از آن استفاده کنید
+    </string>
+    <string-array name="months">
+        <item>فروردین</item>
+        <item>اردیبهشت</item>
+        <item>خرداد</item>
+        <item>تیر</item>
+        <item>مرداد</item>
+        <item>شهریور</item>
+        <item>مهر</item>
+        <item>آبان</item>
+        <item>آذر</item>
+        <item>دی</item>
+        <item>بهمن</item>
+        <item>اسفند</item>
+    </string-array>
+    <string name="internetDown">
+    اتصال شما به اینترنت برقرار نیست . برای استفاده از برنامه باید به اینترنت متصل باشید
+</string>
+    <string name="BoardImageThumb">http://billboard.mobleabrisham.ir/Images/Boards/Thumb/</string>
+    <string name="ProfileImageFolder">http://billboard.mobleabrisham.ir/Images/Person/Thumb/</string>
+    <string name="BoardImagesFolder">http://billboard.mobleabrisham.ir/images/boards/img/</string>
+    <string name="SliderFolderName">http://billboard.mobleabrisham.ir/images/Sliders/img/</string>
+
+
+    <string name="Owner_help">
+       درود مالک عزیز
+        \n
+          در برنامه ی اندرویدی ایران بیلبورد شما اختیاراتی دارید که به شرح ذیل است
+      \n  در قسمت مدیریت در منوی برنامه میتوانید گزارشی از تابلو های شما که آن ها را قبلا اجاره دادید مشاهده کنید
+        همچنین می توانید برای تابلو های خودتان تعیین وضعیت کنید مثلا فرضا شما در سیستم مالک 10 تابلو هستید حال قصد دارید خودتان آن هارا برای دوستان خود یا مشتریان رزرو و اجاره کنید
+        اختیاراتی که  شما دارید این است که میتوانید تابلوی خودتان را از هر وضعیتی  به حالت آزاد در بیاورید. اختیار دیگری که دارید میتوانید یک تابلوی آزاد را به حالت رزرو معلق در بیاورید یعنی اینکه این تابلو به صورت قطعی اجاره نشده و ب معنای ناتمام ماندن معامله است که این قضیه از طریق راهبر مورد بررسی قرار می گیرد.
+        اختیار دیگر شما این است که میتوانید یک تابلو را به صورت اجاره در اختیار در بیاورید یعنی به معنای رزرو قطعی شما در بازه ی زمانی مربوطه که تعیین میکنید.
+    </string>
+
+    <string name="SpecialUser_help">
+       درود کاربرویژه عزیز
+        \n
+        شما در این سیستم به عنوان کاربر ویژه شناسایی می شوید،یعنی فردی که متقاضی تابلو برای رزرو می باشد
+          \n
+         روش کار به این گونه است که شما از بین لیست تابلوها میتوانید تابلوی مورد نظر را انتخاب کنید روی آن کلیک میکنید و به صفحه ی جزئیات تابلو وارد می شویداگر تابلو را پسندیدید روی دکمه ی درخواست رزرو کلیک میکنید.سپس درخواست شما برای رزرو این تابلو مورد بررسی راهبر قرار می گیرد و بین بازه ی 24 ساعت الی 48 ساعت با شما تماس میگیرد و پس از بررسی شرایط شما و موافقت طرفین میتوانید تابلو را اجاره کنید.
+        \n
+        در قسمت منوها قسمت مدیریت تابلوهای من میتوانید لیست تابلو هایی را که تا به حال اجاره گرفتید مشاهده کنید.
+    </string>
+    <string name="loading_title">لطفا کمی صبر کنید...</string>
+</resources>

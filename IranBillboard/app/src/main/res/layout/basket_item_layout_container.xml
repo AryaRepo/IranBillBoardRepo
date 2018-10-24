@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="180dp"
+        android:layout_height="190dp"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="14dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/Basket_btn_Delete"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/ic_delete"/>
+
+            <TextView
+                android:id="@+id/Basket_txtBoardName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Basket_btn_Delete"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="نام تابلو ی موردعلاقه"
+                android:textColor="#000"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/Basket_txtCategoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Basket_txtBoardName"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="نام دسته بندی تابلو"
+                android:textColor="#000"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/Basket_txtBoardPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Basket_txtCategoryTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="5dp"
+                android:gravity="center"
+                android:text="قیمت تابلو ی مورد علاقه"
+                android:textColor="#000"
+                android:textSize="11sp"/>
+
+            <Button
+                android:id="@+id/Basket_btn_ShowDetail"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Basket_txtBoardPrice"
+                android:text="مشاهده جزئیات"
+                android:textSize="13sp"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

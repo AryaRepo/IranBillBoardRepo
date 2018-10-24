@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detail_switcher"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentTop="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/detail_anim"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_margin="3dp"
+            app:lottie_autoPlay="true"
+            app:lottie_colorFilter="@color/colorPrimary"
+            app:lottie_fileName="preloader.json"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/detail_anim"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="لطفا کمی شکیبا باشید"
+            android:textSize="16sp"/>
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <include
+                android:id="@+id/DetailedToolBarInclude"
+                layout="@layout/toolbar_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/appbar_layout_activity"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/detail_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/slider"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
+
+                    <me.relex.circleindicator.CircleIndicator
+                        android:id="@+id/Sliderindicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"/>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/BoardInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/slider"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/Relative_root1"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_gravity="right"
+                                android:background="@drawable/card_header_tag"
+                                android:gravity="center|right"
+                                android:paddingRight="8dp"
+                                android:paddingTop="5dp">
+
+                                <ImageView
+                                    android:id="@+id/img_tty"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    app:srcCompat="@drawable/ic_board_info"/>
+
+                                <TextView
+                                    android:id="@+id/txt_detail_board_thumb"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_toLeftOf="@id/img_tty"
+                                    android:text="مشخصات تابلو"
+                                    android:textColor="#FFF"
+                                    android:textSize="@dimen/app_title_text_view"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/Relative_root1"
+                                android:paddingTop="5dp">
+
+                                <RelativeLayout
+                                    android:id="@+id/root2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingTop="5dp">
+
+                                    <TextView
+                                        android:id="@+id/detailed_txt_TimeLeft"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_margin="8dp"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text="زمان باقی مانده تا آزاد شدن "
+                                        android:textColor="#000"/>
+
+                                    <ImageView
+                                        android:id="@+id/detailed_img_TimeLeft"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:layout_toRightOf="@id/detailed_txt_TimeLeft"
+                                        app:srcCompat="@drawable/ic_timer"/>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/root2">
+
+                                    <com.hookedonplay.decoviewlib.DecoView
+                                        android:id="@+id/dynamicArcView"
+                                        android:layout_width="150dp"
+                                        android:layout_height="150dp"
+                                        android:layout_centerInParent="true"
+                                        android:layout_margin="5dp"
+                                        app:dv_lineWidth="4dp"/>
+
+                                    <TextView
+                                        android:id="@+id/detailed_txt_percent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignTop="@+id/dynamicArcView"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_centerInParent="true"
+                                        android:gravity="center"
+                                        android:padding="10dp"
+                                        android:text=""
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:textColor="@color/colorPrimary"
+                                        />
+
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal|center_vertical"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text=" ثانیه "
+                                    android:textColor="#757575"/>
+
+                                <TextView
+                                    android:id="@+id/detail_sec_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text="59"
+                                    android:textColor="#757575"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text=" دقیقه و "
+                                    android:textColor="#757575"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/detail_min_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text="59"
+                                    android:textColor="#757575"
+                                    />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text=" ساعت و "
+                                    android:textColor="#757575"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/detail_hour_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text="999"
+                                    android:textColor="#757575"
+                                    />
+
+
+                                <!--
+                                    -->
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text=" روز و "
+                                    android:textColor="#757575"/>
+
+                                <TextView
+                                    android:id="@+id/detail_day_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text="999"
+                                    android:textColor="#757575"
+                                    />
+
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/detailed_txt_category"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="2dp"
+                                    android:drawablePadding="5dp"
+                                    android:padding="10dp"
+                                    android:textColor="#000"
+                                    />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/line_devider_style2"/>
+
+                            <TextView
+                                android:id="@+id/detail_txt_DoesHaveLightness"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="2dp"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:textColor="#000"
+                                />
+
+                            <TextView
+                                android:id="@+id/detailed_txt_price"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="2dp"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:padding="13dp"
+                                android:textColor="#000"
+                                />
+
+                            <TextView
+                                android:id="@+id/txt_Waiting_users"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="2dp"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:textColor="#000"
+                                android:visibility="gone"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <Button
+                                    android:id="@+id/detailed_btn_ReserveDemand"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_weight="1"
+                                    android:layout_gravity="center_horizontal"
+                                    android:background="@drawable/reserv_btn_basket"
+                                    android:drawablePadding="5dp"
+                                    android:paddingBottom="3dp"
+                                    android:paddingLeft="9dp"
+                                    android:paddingRight="9dp"
+                                    android:paddingTop="3dp"
+                                    android:text="درخواست رزرو"
+                                    android:textColor="#FFF"
+                                    android:visibility="gone"/>
+
+                                <Button
+                                    android:id="@+id/detailed_btn_AddToReserveCart"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="8dp"
+                                    android:layout_marginRight="20dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/reserve_button"
+                                    android:drawableRight="@drawable/ic_order_basket_white"
+                                    android:gravity="center|right"
+                                    android:text="افزودن به سبد رزرو"
+                                    android:textColor="#FFF"
+                                    android:visibility="gone"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/BoardAddressInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/BoardInfo"
+                        android:layout_margin="8dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="4dp"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/card_header_tag"
+                                android:gravity="center|right"
+                                android:paddingRight="8dp"
+                                android:paddingTop="5dp">
+
+                                <ImageView
+                                    android:id="@+id/img_ttx"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    app:srcCompat="@drawable/ic_board_info"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_toLeftOf="@id/img_ttx"
+                                    android:gravity="center|right"
+                                    android:paddingRight="5dp"
+                                    android:text="ویژگی ها"
+                                    android:textColor="#FFF"
+                                    android:textSize="@dimen/app_title_text_view"/>
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_margin="2dp"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="ابعاد :1 متر در 3 متر"
+                                android:textColor="#000"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_margin="2dp"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="جهت :افقی"
+                                android:textColor="#000"
+
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right"
+                                android:layout_margin="2dp"
+                                android:drawablePadding="5dp"
+                                android:gravity="center"
+                                android:padding="10dp"
+                                android:text="تعداد وجه : 3"
+                                android:textColor="#000"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/detailed_BoardStyleAreaText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="2dp"
+                                android:layout_weight="0.9"
+                                android:gravity="center|right"
+                                android:lineSpacingExtra="5dp"
+                                android:padding="10dp"
+                                android:scrollHorizontally="false"
+                                android:text="TTs"
+                                android:textColor="#000"/>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="3dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="8dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="0.4"
+                                        android:gravity="center|right"
+                                        android:text="آدرس  "
+                                        android:textColor="#000"
+                                        android:textSize="@dimen/app_title_text_view"/>
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|right"
+                                        android:layout_marginRight="5dp"
+                                        app:srcCompat="@drawable/ic_boardlocation"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/line_devider_style2"/>
+
+                                <TextView
+                                    android:id="@+id/detailed_txt_address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="0.9"
+                                    android:gravity="center|right"
+                                    android:lineSpacingExtra="5dp"
+                                    android:padding="10dp"
+                                    android:scrollHorizontally="false"
+                                    android:textColor="#000"
+                                    />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginBottom="8dp"
+                                    android:orientation="horizontal"
+                                    android:paddingRight="8dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_margin="2dp"
+                                        android:layout_weight="0.4"
+                                        android:gravity="center|right"
+                                        android:paddingRight="5dp"
+                                        android:text="توضیحات"
+                                        android:textColor="#000"
+                                        android:textSize="@dimen/app_title_text_view"/>
+
+                                    <ImageView
+                                        android:layout_width="24dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center|right"
+                                        android:layout_marginRight="5dp"
+                                        app:srcCompat="@drawable/ic_complete_infrormation"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@drawable/line_devider_style2"/>
+
+                                <TextView
+                                    android:id="@+id/detailed_txt_board_info"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_weight="0.9"
+                                    android:gravity="center|right"
+                                    android:lineSpacingExtra="5dp"
+                                    android:padding="10dp"
+                                    android:scrollHorizontally="false"
+                                    android:textColor="#000"/>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="8dp">
+
+                                    <ImageView
+                                        android:id="@+id/img_similar"
+                                        android:layout_width="36dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignBottom="@id/similar_boards"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_alignTop="@id/similar_boards"
+                                        android:layout_gravity="center|right"
+                                        android:layout_toEndOf="@+id/similar_boards"
+                                        app:srcCompat="@drawable/ic_board_category"/>
+
+                                    <TextView
+                                        android:id="@+id/similar_boards"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:gravity="center|right"
+                                        android:lineSpacingExtra="5dp"
+                                        android:padding="10dp"
+                                        android:scrollHorizontally="false"
+                                        android:text="تابلو های مشابه"
+                                        android:textColor="#000"
+                                        android:textSize="16sp"/>
+
+                                    <org.lucasr.twowayview.TwoWayView
+                                        android:id="@+id/similar_boards_list"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@id/similar_boards"
+                                        android:layout_margin="8dp"
+                                        android:orientation="horizontal"
+                                        android:padding="8dp"/>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_below="@id/similar_boards"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="20dp"
+                                        android:background="@drawable/line_devider_style2"/>
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                              android:id="@+id/mapview1"
+                              android:name="com.google.android.gms.maps.SupportMapFragment"
+                              android:layout_width="match_parent"
+                              android:layout_height="300dp"
+                              android:layout_below="@id/BoardAddressInfo"
+                              android:layout_margin="10dp"/>
+
+                </RelativeLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+
+        </RelativeLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</ViewSwitcher>

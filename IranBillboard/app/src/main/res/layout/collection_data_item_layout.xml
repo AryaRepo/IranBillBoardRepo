@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="170dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    android:foreground="?selectableItemBackground"
+    app:cardCornerRadius="2dp"
+    app:cardElevation="2dp">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_board_photo"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="fitXY"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/txt_board_score"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/txt_score_style"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="103 امتیاز"
+            android:textColor="#000"
+            android:textSize="8sp"/>
+
+        <RelativeLayout
+            android:id="@+id/line_devider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/txt_board_name"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/line_devider_style2"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_board_price"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/oval_holder_style"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/txt_board_state"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="5dp"
+                android:text="آزاد"
+                android:textColor="#4981b2"
+                android:textSize="10sp"/>
+
+            <RelativeLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="6dp"
+                android:layout_marginTop="6dp"
+                android:background="#AED581"/>
+
+            <TextView
+                android:id="@+id/txt_board_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.6"
+                android:gravity="center_vertical|center_horizontal"
+                android:padding="5dp"
+                android:text="اسکورلینگ"
+                android:textColor="#4981b2"
+                android:textSize="11sp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_board_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/line_devider1"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/ic_cost_light_green"
+            android:gravity="center"
+            android:drawableTint="#4981b2"
+            android:padding="5dp"
+            android:text="905000 تومان"
+            android:textColor="#4981b2"/>
+
+        <TextView
+            android:id="@+id/txt_board_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/img_board_photo"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="نام تابلو"
+            android:textColor="#dd000000"
+            android:textSize="17sp"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/Search_CardHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:cardCornerRadius="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize">
+
+
+            <EditText
+                android:id="@+id/search_edt_SearchText"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edt_search_style2"
+                android:gravity="center"
+                android:hint="دنبال چه چیزی میگردید؟!"
+                android:textColor="#757575"
+                android:textColorHint="#757575"
+                android:textSize="14sp"/>
+
+            <RelativeLayout
+                android:id="@+id/search_icon_container"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_fab_white">
+
+                <ImageButton
+                    android:id="@+id/btn_search_search"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circular_button_style"
+                    android:src="@drawable/ic_search_light_gray"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/clean_icon_container"
+                android:layout_width="?android:attr/actionBarSize"
+                android:layout_height="?android:attr/actionBarSize"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_fab_white">
+
+                <ImageButton
+                    android:id="@+id/btn_clean_search"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/circular_button_style"
+                    android:src="@drawable/ic_clean_gray"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/SearchRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Search_CardHeader"
+        android:visibility="gone"
+        />
+
+<LinearLayout
+    android:id="@+id/LottieSearch_EmptyList"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:layout_below="@id/Search_CardHeader"
+    android:layout_height="wrap_content">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="3dp"
+        app:lottie_autoPlay="true"
+        android:layout_gravity="center_horizontal|center_vertical"
+        app:lottie_fileName="empty_list.json"
+        app:lottie_loop="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:textColor="#f96060"
+        android:gravity="center_horizontal"
+        android:text="هیچ نتیجه ای یافت نگردید!"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+</RelativeLayout>

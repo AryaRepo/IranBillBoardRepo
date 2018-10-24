@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/FavoriteToolbarInclude"
+        layout="@layout/toolbar_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <GridView
+        android:id="@+id/FavoriteListItem"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/FavoriteToolbarInclude"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:fadeScrollbars="true"
+        android:numColumns="2"
+        android:smoothScrollbar="true"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:id="@+id/LottieFavorite_EmptyList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/FavoriteToolbarInclude">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/anim_fav"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="empty_list.json"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/anim_fav"
+            android:textSize="15sp"
+            android:textColor="#000"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="لیست علاقمندی ها خالیه"/>
+    </RelativeLayout>
+</RelativeLayout>

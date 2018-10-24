@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:gravity="center_horizontal|center_vertical"
+            android:paddingRight="8dp"
+            android:text="تعیین وضعیت تابلو"
+            android:textColor="#FFF"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ir.hamsaa.RtlMaterialSpinner
+            android:id="@+id/sp_status_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edit_text_border"
+            android:gravity="right|center_horizontal|center_vertical"
+            app:ms_alignLabels="false"
+            app:ms_arrowColor="@color/colorPrimary"
+            app:ms_baseColor="@color/colorPrimary"
+            app:ms_enableErrorLabel="false"
+            app:ms_enableFloatingLabel="false"
+            app:ms_hint="یکی از وضعیت ها را انتخاب کنید"
+            app:ms_hintColor="@color/colorPrimary"
+            app:ms_isRtl="true"
+            app:ms_thickness="1dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/line_divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btn_end_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                android:textColor="@color/colorPrimaryDark"
+                android:visibility="invisible"
+                android:text="انتخاب تاریخ پایان"/>
+
+            <Button
+                android:id="@+id/btn_begin_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:textColor="@color/colorPrimaryDark"
+                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                android:text="انتخاب تاریخ شروع"/>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_begin_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/txt_end_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:visibility="invisible"
+            />
+
+        <Button
+            android:id="@+id/dlg_Btn_SaveChanges"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/login_btn_style"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:text="ثبت وضعیت"
+            android:textColor="#FFF"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</LinearLayout>

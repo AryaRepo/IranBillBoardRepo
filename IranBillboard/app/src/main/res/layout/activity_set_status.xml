@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_set_status"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/st_txt_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="لیست تابلو های شما"
+        android:textColor="#fff"
+        android:textSize="16dp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/st_EmptyList"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/st_txt_toolbar"
+        android:layout_centerInParent="true"
+        android:layout_margin="3dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="empty_list.json"
+        app:lottie_loop="true"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_change_status"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/st_txt_toolbar"/>
+
+</RelativeLayout>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/header_pro"
+            android:layout_width="match_parent"
+            android:layout_height="360dp">
+
+            <FrameLayout
+                android:id="@+id/top_lay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/header_cover_image1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView
+                    android:id="@+id/header_cover_image2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ee5a96ca"/>
+            </FrameLayout>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/user_profile_image"
+                android:layout_width="180dp"
+                android:layout_height="175dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                app:civ_border_color="#FFF"
+                app:civ_border_width="2dp"/>
+
+            <TextView
+                android:id="@+id/user_profile_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_profile_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/pro_badge"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/user_profile_name"
+                android:layout_toRightOf="@+id/user_profile_role_name"
+                app:srcCompat="@drawable/ic_medal"/>
+
+            <TextView
+                android:id="@+id/user_profile_role_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/pro_badge"
+                android:layout_alignLeft="@id/user_profile_name"
+                android:layout_alignRight="@id/user_profile_name"
+                android:layout_alignTop="@id/pro_badge"
+                android:layout_below="@+id/user_profile_name"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#fff"
+                android:textSize="18sp"/>
+
+            <ImageView
+                android:id="@+id/pro_badge_point"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_below="@id/pro_badge"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/user_profile_role_name"
+                app:srcCompat="@drawable/ic_star"/>
+
+            <TextView
+                android:id="@+id/user_profile_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/pro_badge_point"
+                android:layout_alignLeft="@id/user_profile_name"
+                android:layout_alignRight="@id/user_profile_name"
+                android:layout_alignTop="@id/pro_badge_point"
+                android:layout_below="@+id/user_profile_role_name"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text=""
+                android:textColor="#fff"
+                android:textSize="18sp"/>
+
+            <ImageButton
+                android:id="@+id/edit_pro"
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:srcCompat="@drawable/ic_edit"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bth_edit_password"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginRight="5dp"
+            android:layout_below="@id/header_pro"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="14sp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/img_edit_password"
+                android:text="ویرایش رمز عبور"/>
+
+
+            <ImageView
+                android:id="@+id/img_edit_password"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:tint="@color/colorPrimary"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_edit"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txt_UserProfile_txtEmail"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/txt_UserProfile_txtEmail"
+            android:layout_below="@id/bth_edit_password"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/ic_user_email"/>
+
+        <TextView
+            android:id="@+id/txt_UserProfile_txtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bth_edit_password"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@id/img_email"
+            android:background="#fff"
+            android:clickable="true"
+            android:padding="20dp"
+            android:text=""/>
+
+        <ImageView
+            android:id="@+id/img_about_me"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txt_UserProfile_txtAboutMe"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/txt_UserProfile_txtAboutMe"
+            android:layout_below="@id/header_pro"
+            android:layout_marginRight="8dp"
+            app:srcCompat="@drawable/ic_person"/>
+
+        <TextView
+            android:id="@+id/txt_UserProfile_txtAboutMe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_UserProfile_txtEmail"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@id/img_email"
+            android:background="#fff"
+            android:clickable="true"
+            android:lineSpacingExtra="3dp"
+            android:padding="20dp"
+            android:text=""/>
+    </RelativeLayout>
+</ScrollView>

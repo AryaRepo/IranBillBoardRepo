@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:ap="http://schemas.android.com/tools"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/SignUp_Root_Layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/img_sgn_footer"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/img_sgn_footer2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"/>
+    </FrameLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/SignUp_Card_Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:cardElevation="2dp"
+        app:cardPreventCornerOverlap="false">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:id="@+id/rekl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/SignUp_txt_PhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="@dimen/login_edit_text_margin"
+                    android:layout_marginRight="@dimen/login_edit_text_margin"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/my_edit_text_border"
+                    android:hint="شماره تلفن"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:padding="5dp"
+                    android:textColor="#000"
+                    android:textColorHint="@color/CommonColor"
+                    android:textSize="@dimen/app_normal_edit_text"/>
+
+                <EditText
+                    android:id="@+id/SignUp_txt_PassWord"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/SignUp_txt_PhoneNumber"
+                    android:layout_marginLeft="@dimen/login_edit_text_margin"
+                    android:layout_marginRight="@dimen/login_edit_text_margin"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/my_edit_text_border"
+                    android:hint="رمز عبور"
+                    android:inputType="textPassword"
+                    android:padding="5dp"
+                    android:textColor="#000"
+                    android:textColorHint="@color/CommonColor"
+                    android:textSize="@dimen/app_normal_edit_text"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/rel1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@id/SignUp_txt_PassWord"
+                    android:layout_marginLeft="@dimen/login_edit_text_margin"
+                    android:layout_marginRight="@dimen/login_edit_text_margin"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/SignUp_txt_Reagent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/my_edit_text_border"
+                        android:hint="شماره تلفن معرف (اختیاری)"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="5dp"
+                        android:textColor="#000"
+                        android:textColorHint="@color/CommonColor"
+                        android:textSize="@dimen/app_normal_edit_text"/>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#757575"/>
+
+                    <ImageButton
+                        android:id="@+id/SignUp_Reagent_help"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignBottom="@+id/SignUp_txt_Reagent"
+                        android:layout_alignTop="@+id/SignUp_txt_Reagent"
+                        android:layout_marginLeft="5dp"
+                        android:clickable="true"
+                        app:srcCompat="@drawable/ic_info_help"/>
+                </RelativeLayout>
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/rel2"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:layout_below="@id/rel1"
+                                android:layout_marginLeft="@dimen/login_edit_text_margin"
+                                android:layout_marginRight="@dimen/login_edit_text_margin"
+                                android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/SignUp_txt_Email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/my_edit_text_border"
+                        android:hint="ایمیل (اختیاری )"
+                        android:inputType="textEmailAddress"
+                        android:paddingLeft="40dp"
+                        android:paddingRight="5dp"
+                        android:textColor="#000"
+                        android:textColorHint="@color/CommonColor"
+                        android:textSize="@dimen/app_normal_edit_text"/>
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="6dp"
+                        android:background="#757575"/>
+
+                    <ImageButton
+                        android:id="@+id/SignUp_email_help"
+                        style="@style/Base.Widget.AppCompat.Button.Borderless"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignBottom="@+id/SignUp_txt_Email"
+                        android:layout_alignTop="@+id/SignUp_txt_Email"
+                        android:layout_marginLeft="5dp"
+                        android:clickable="true"
+                        app:srcCompat="@drawable/ic_info_help"/>
+                </RelativeLayout>
+
+
+                <Button
+                    android:id="@+id/SignUp_btn_Register"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_below="@id/rel2"
+                    android:layout_marginTop="50dp"
+                    android:background="@drawable/signup_btn_style"
+                    android:text="ثبت نام"
+                    android:textColor="#FFF"/>
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

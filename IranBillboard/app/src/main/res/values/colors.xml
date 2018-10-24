@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#ff5a60</color>-->
+    <color name="colorPrimary">#297fca</color>
+    <color name="colorPrimaryDark">#195fca</color>
+    <color name="colorAccent">#5a96ca</color>
+    <color name="login_edt_border_color">#BDBDBD</color>
+    <color name="login_edt_icon_color">#BDBDBD</color>
+    <color name="login_edt_hint_color">#BDBDBD</color>
+    <color name="login_edt_text_color">#616161</color>
+    <color name="login_btn_color_blue">#2196F3</color>
+    <color name="login_btn_color_red">#F44336</color>
+    <color name="CommonColor">#bdbdbd</color>
+    <!--<color name="toolbarIconColor">#2196F3</color>-->
+    <color name="toolbarIconColor">#ffffff</color>
+    <color name="toolbarTextColor">#2196F3</color>
+    <color name="categoryTextColor">#9E9E9E</color>
+    <color name="bottomBarIconColor">#BDBDBD</color>
+    <color name="bottomBarIconColorItemSelected">#2196F3</color>
+    <color name="layoutDividerColor">#E0E0E0</color>
+    <color name="menu_items_textColor">#757575</color>
+    <color name="menu_items_iconColor">#757575</color>
+    <color name="app_ripple_color">#44000000</color>
+
+</resources>
